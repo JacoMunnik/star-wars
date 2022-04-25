@@ -9,7 +9,7 @@ export function PersonDetails() {
   const {name}: {id: string} = useParams();
   console.log(name)
 
-  const { isLoading, error, data } = useQuery(gql`
+  const {data } = useQuery(gql`
   {
       person(name:"${name}"){
           results{

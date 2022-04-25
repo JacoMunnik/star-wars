@@ -16,14 +16,7 @@ const Button = styled.button`
 
 export default function App() {
   return (
-    <div className="Header">
-      <nav className="navMenu">
-            <h1>Star Wars app</h1>
-                <Button as="a" href="/StarWarsTable">Home</Button>
-                <div className="dot">
-            </div>
-      </nav>
+
       <Outlet />
-    </div>
   );
 }

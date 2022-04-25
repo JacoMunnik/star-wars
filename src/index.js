@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -16,7 +15,7 @@ import {
 } from "react-router-dom";
 import StarWarsTable from "./StarWarsTable";
 import PersonDetails from "./PersonDetails";
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 const Button = styled.button`
   display: inline-block;
@@ -32,7 +31,7 @@ const Button = styled.button`
 
 
 const client = new ApolloClient({
-  uri: 'http://localhost:9000',
+  uri: 'https://g26utt.sse.codesandbox.io/',
   cache: new InMemoryCache()
 });
 

@@ -6,9 +6,6 @@ import {
     gql
   } from "@apollo/client";
   import { Link } from 'react-router-dom'
-  import { BrowserRouter, BrowserRouter as Router, Route, Routes, useRoutes } from 'react-router-dom';
-  import PersonDetails from "./PersonDetails";
-  import { useNavigate } from 'react-router-dom';
   import SpinnerLoader from './SpinnerLoaded';
 
  
@@ -126,20 +123,6 @@ const reducer = (state, { type, payload }) => {
 function StarWarsTable() {
   const [{ queryPageIndex, queryPageSize }, dispatch] =
     React.useReducer(reducer, initialState);
-
-    const navigate = useNavigate();
-    function _navigateToPage (pageNumber) {
-        const page = pageNumber
-        const title = "Hello World";
-        navigate("/fragment", {
-          state:{
-              page,
-              title
-            },
-        });
-    
-      }
-
 
   const { isLoading, error, data } = useQuery(gql`
     {
